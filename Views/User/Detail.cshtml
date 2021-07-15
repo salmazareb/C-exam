@@ -1,0 +1,18 @@
+@using Finalexam.Models;
+@model Hobby;
+
+
+<h1>@ViewBag.AllHobby.Name</h1>
+
+<h4 class="card p-3">Description: <br>@ViewBag.AllHobby.Description</h4>
+
+<p class="card p-3">@ViewBag.Name enthusiasts:</p>
+
+@foreach(var item in ViewBag.AllHobby.Users)
+{
+    <p class="card p-3">@item.User.FirstName </p>
+}
+<p>become an enthusiasts</p>
+<form asp-action="Add" asp-controller="User" method="post"><button>Add to Hobby</button></form>
+
+

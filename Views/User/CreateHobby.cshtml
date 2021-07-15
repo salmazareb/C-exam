@@ -1,0 +1,17 @@
+@using Finalexam.Models;
+@model Hobby;
+<form class="shadow-lg p-4 my-5 bg-white rounded w-50" asp-action="CreateHobby" asp-controller="User" method="post">
+ <h2 class="text-center text-muted">Create a Hobby:</h2>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+
+   <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control"/>
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+<button class="btn btn-dark" >Create</button>  
+</form>

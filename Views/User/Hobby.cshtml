@@ -1,0 +1,26 @@
+<a href="/logout" class="text-right">Logout</a>
+<h1>Hobby</h1>
+
+  <table class="table">
+       <thead>
+           <tr>
+           <th scope="col">Name</th>
+           <th scope="col">enthusiasts</th>
+           </tr>
+      </thead>
+      <tbody>
+   
+        @foreach(var item in ViewBag.AllHobby)
+        {
+    <tr>
+      <td><a href="/detail/@item.HobbyId">@item.Name<a/></td>
+      <td>@item.Users.Count</td>
+      </tr>
+        }
+  
+  </tbody>
+  </table>
+       
+  
+
+  <a href="/CreateHobby">Create Hobby</a>
